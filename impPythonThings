@@ -1,8 +1,10 @@
 How to install anything through pip:
 python3 -m pip install --user virtualenv
 
-How to set local environment:
+How to set virtual environment:
 1. python3 -m venv env
 2. source env/bin/activate
 
+How to deactivate virtual environment:
+deactivate
 
