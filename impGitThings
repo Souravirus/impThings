@@ -1,0 +1,30 @@
+1."How to set proxy in git"
+git config  --global http.proxy 172.16.20.2:3128
+
+2."How to unset git proxy
+git config --global --unset http.proxy
+
+3."How to check current git proxy
+git config --global --get http.proxy
+
+Steps to commit changes:
+
+1. git showdown (git log --decorate --oneline --all --graph)
+2. git add [location of files or folders].
+3. git status
+4. git commit -m "Description of commit".
+
+Steps for branching
+1. git branch add [branch name]
+2. git checkout [branch name]
+3. git branch remove [branch name]
+
+Steps for remote:
+1. git remote add [remote name] [remote link]
+2. git remote remove [remote name]
+
+Steps for pushing, fetching, pulling, merging.
+1. git push [remote name] [remote branch]
+2. git merge [remote name]/[remote branch]
+3. git pull [remote name] [remote branch]
+4. git fetch [remote name] [remote branch]
