@@ -15,7 +15,8 @@ Steps to commit changes:
 4. git commit -m "Description of commit".
 
 Steps for branching
-1. git branch add [branch name]
+For adding branch
+1. git branch [branch name]
 2. git checkout [branch name]
 3. git branch remove [branch name]
 
