@@ -1,0 +1,21 @@
+To set up localhost in a particular directory:
+1. php -S localhost:8080
+
+How to install LAMP in ubuntu:
+
+For installing apache
+1. sudo apt-get update
+2. sudo apt-get install apache2
+
+for installation of MYSQL in ubuntu:
+1. sudo apt-get install mysql-server
+2. mysql_secure_installation
+
+for installation of php:
+1. sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
+2. sudo systemctl restart apache2
+3. sudo apt-get install php-cli
+
+Reference:
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
+

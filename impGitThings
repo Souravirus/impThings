@@ -32,6 +32,6 @@ Steps for pushing, fetching, pulling, merging.
 
 Steps for resetting :
 for resetting the repo to the last commit:
-1. git reset -- hard HEAD ^
+1. git reset -- hard HEAD^
 for resetting the repo to the last n commits(n is a number):
 1. git reset -- hard HEAD~3
