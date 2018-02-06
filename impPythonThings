@@ -1,5 +1,5 @@
-How to install anything through pip:
-python3 -m pip install --user virtualenv
+Install venv:
+sudo apt-get install python3-venv
 
 How to set virtual environment:
 1. python3 -m venv env
