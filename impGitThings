@@ -35,14 +35,19 @@ Steps for remote:
 1. git remote add [remote name] [remote link]
 2. git remote remove [remote name]
 
-Steps for pushing, fetching, pulling, merging.
+Steps for pushing, fetching, pulling, merging and rebasing.
 1. git push [remote name] [remote branch]
-2. git merge [remote name]/[remote branch]
-3. git pull [remote name] [remote branch]
-4. git fetch [remote name] [remote branch]
+2. git pull [remote name] [remote branch]
+3. git fetch [remote name] [remote branch]
+4. git merge [remote name]/[remote branch]
+5. git rebase [remote name]/[remote branch]
+
+Steps for updating the online branches of a repo:
+git fetch [remote name]
 
 Steps for resetting :
 for resetting the repo to the last commit:
 1. git reset -- hard HEAD^
 for resetting the repo to the last n commits(n is a number):
 1. git reset -- hard HEAD~3
+
