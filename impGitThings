@@ -46,8 +46,9 @@ Steps for updating the online branches of a repo:
 git fetch [remote name]
 
 Steps for resetting :
+for resetting every changes made currently:
+1. git reset -- hard
 for resetting the repo to the last commit:
 1. git reset -- hard HEAD^
 for resetting the repo to the last n commits(n is a number):
 1. git reset -- hard HEAD~3
-
