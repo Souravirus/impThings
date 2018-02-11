@@ -1,0 +1,6 @@
+How to create a new rails folder?
+1. rails new "Folder name"
+2. Go to Gemfile and comment out two lines namely:
+    gem 'spring'
+    gem 'spring-watcher-listen', '~>2.0.0'
+3. Then run bundle update
