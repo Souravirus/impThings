@@ -4,3 +4,17 @@ How to create a new rails folder?
     gem 'spring'
     gem 'spring-watcher-listen', '~>2.0.0'
 3. Then run bundle update
+
+How to generate any model
+rails generate model [model name] name:string email:string
+
+How to add a new column to a database in rails?(in snake casing)
+rails generate migration add_password_digest_to_users password_digest:string
+
+How to remove a column to a dabase in rails?(in camel casing)
+rails generate migration RemovePartNumberFromProducts part_number:string
+
+Both snake casing and camel casing works
+
+How to see columns of a database?
+[database name].column_names
