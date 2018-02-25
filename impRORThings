@@ -5,6 +5,23 @@ How to create a new rails folder?
     gem 'spring-watcher-listen', '~>2.0.0'
 3. Then run bundle update
 
+How to see configuration of the configuration of your website?
+bundle exec rails about
+
+If you want to find the meaning of any @variable in views then checkout in ap/controllers/specificFolderNameOfView_controller.rb
+
+If you want to add a variable in between a string then use #{variable_name}
+
+If you want to start a rails console but do not want to update those changesthen the command would be:
+1. rails console --sandbox
+
+Any function used in view is written in helper function under the name of the folder of that view:
+for example you want to make helper function for a folder named "static_pages" in views folder so you would make function in app/helpers/static_pages_helper.rb
+
+Some functions you can use to implement html elements:
+image_tag("path", alt: " ", class: " ")
+link_to("body", "link")
+
 How to generate any model
 rails generate model [model name] name:string email:string
 
@@ -14,7 +31,14 @@ rails generate migration add_password_digest_to_users password_digest:string
 How to remove a column to a dabase in rails?(in camel casing)
 rails generate migration RemovePartNumberFromProducts part_number:string
 
+How to save the changes in models of rails?
+rails db:migrate
+
 Both snake casing and camel casing works
 
 How to see columns of a database?
-[database name].column_names
+1. rails console
+2. [model name].column_names
+
+Update command in Ruby
+Address.where(:cid => 15).update_all(user_name: 'Samuel')
