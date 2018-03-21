@@ -54,6 +54,7 @@ Steps for pushing, fetching, pulling, merging and rebasing.
 3. git fetch [remote name] [remote branch]
 4. git merge [remote name]/[remote branch]
 5. git rebase [remote name]/[remote branch]
+6. git rebase -i [remote name]/[remote branch] //for squashing the commits this is useful, instead of pick write fixup on it but never fixup the first commit
 
 
 Steps for updating the online branches of a repo:
@@ -74,3 +75,7 @@ for resetting the repo to the last commit:
 for resetting the repo to the last n commits(n is a number):
 1. git reset --hard HEAD~3
 
+for updating deleted branch on remote 
+1. git fetch --prune
+or 
+1. git fetch -p

@@ -1,3 +1,6 @@
+Some basic terminologies:
+Active Record Object: It can be described as a table in a database. 
+
 How to create a new rails folder?
 1. rails new "Folder name"
 2. Go to Gemfile and comment out two lines namely:
@@ -6,11 +9,52 @@ How to create a new rails folder?
 3. Then run bundle update
 
 How to see configuration of the configuration of your website?
-bundle exec rails about
+bundle exec rake about
+
+How to generate a new controller?
+rails generate controller [Controller name] [View name]+
+
+How to generate a new model?
+rails generate model [model name] [model attributes]+
+
+Some notable things about models?
+
+How to add a new attribute to a database in rails?(in snake casing)
+rails generate migration add_password_digest_to_users password_digest:string
+
+How to remove a attribute to a dabase in rails?(in camel casing)
+rails generate migration RemovePartNumberFromProducts part_number:string
+
+How to save the changes in models of rails?
+rails db:migrate
+
+How to revert changes in models?
+rails db:revert
+
+Both snake casing and camel casing works
+
+How to see attributes of a database?
+1. rails console
+2. [model name].attribute_names
+
+Update command in Ruby
+Address.where(:cid => 15).update_all(user_name: 'Samuel')
+
+if we give vari = 1 || 2 in ruby it will always take the first true value
+
+If you  want to create a new tupple there are two ways:
+
+1. User.create(name: "Sourav", email: "s@g.com")
+
+2. user = User.new(name: "Sourav", email: "s@g.com")
+   user.save
+
+If you want to check the full error in validating a variable, then use:
+user.errors.full_messages
 
 If you want to find the meaning of any @variable in views then checkout in ap/controllers/specificFolderNameOfView_controller.rb
 
-If you want to add a variable in between a string then use #{variable_name}
+If you want to add a variable in between a string then use #{variable_name} This is known as escaping interpolation
 
 If you want to start a rails console but do not want to update those changesthen the command would be:
 1. rails console --sandbox
@@ -22,23 +66,4 @@ Some functions you can use to implement html elements:
 image_tag("path", alt: " ", class: " ")
 link_to("body", "link")
 
-How to generate any model
-rails generate model [model name] name:string email:string
-
-How to add a new column to a database in rails?(in snake casing)
-rails generate migration add_password_digest_to_users password_digest:string
-
-How to remove a column to a dabase in rails?(in camel casing)
-rails generate migration RemovePartNumberFromProducts part_number:string
-
-How to save the changes in models of rails?
-rails db:migrate
-
-Both snake casing and camel casing works
-
-How to see columns of a database?
-1. rails console
-2. [model name].column_names
-
-Update command in Ruby
-Address.where(:cid => 15).update_all(user_name: 'Samuel')
+has_secure_method of rails adds methods to set and authenticate against a BCrypt password. This mechanism requires you to have a password_digest attribute. The authenticate method automatically authenticates password.
