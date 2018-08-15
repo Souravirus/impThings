@@ -31,16 +31,12 @@ rails db:migrate
 How to revert changes in models?
 rails db:revert
 
-Both snake casing and camel casing works
-
 How to see attributes of a database?
 1. rails console
 2. [model name].attribute_names
 
 Update command in Ruby
 Address.where(:cid => 15).update_all(user_name: 'Samuel')
-
-if we give vari = 1 || 2 in ruby it will always take the first true value
 
 If you  want to create a new tupple there are two ways:
 
@@ -67,3 +63,23 @@ image_tag("path", alt: " ", class: " ")
 link_to("body", "link")
 
 has_secure_method of rails adds methods to set and authenticate against a BCrypt password. This mechanism requires you to have a password_digest attribute. The authenticate method automatically authenticates password.
+
+How to do only particular tests?
+rake test:functionals
+rake test:units
+rake test:integration
+rake test:plugins - Run all test in ./vendor/plugins/**/test
+rake test:recent - Run tests for models and controllers that have been modified in last 10 minutes
+rake test:uncommitted - For projects in Subversion, run tests for the changes that took place in the models and controllers since the last commit
+bin/rails test test/models/user_test.rb:27 to run a single test
+
+Commenting multiple lines in rails:
+    #some code
+=begin
+    #code begins
+        #some code
+    #code ends
+=end
+
+If you want to call a model from controller then use Model.method_name. 
+If you want to call a model from views you can use @model.method_name.
