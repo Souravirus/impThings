@@ -1,1 +1,1 @@
-This is repo for many important documentations for the day to day softwares used by coders. 
+This Repo Contains Many Important Documentations for day to day softwares used by coders. 
