@@ -35,6 +35,8 @@ Steps to commit changes:
 3. git status
 4. git commit -m "Description of commit".
 
+Show git Log History in Graph form:
+git log --oneline --graph --decorate --all
 
 Steps for branching
 For adding branch
