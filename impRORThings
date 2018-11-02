@@ -31,6 +31,9 @@ rails db:migrate
 How to revert changes in models?
 rails db:revert
 
+If you want to start a rails console but do not want to update those changesthen the command would be:
+1. rails console --sandbox
+
 How to see attributes of a database?
 1. rails console
 2. [model name].attribute_names
@@ -45,15 +48,19 @@ If you  want to create a new tupple there are two ways:
 2. user = User.new(name: "Sourav", email: "s@g.com")
    user.save
 
+How to select all the entries of a model?
+[model_name].all
+
+How to select first or last entries of a model?
+[model_name].first
+[model_name].last
+
 If you want to check the full error in validating a variable, then use:
 user.errors.full_messages
 
 If you want to find the meaning of any @variable in views then checkout in ap/controllers/specificFolderNameOfView_controller.rb
 
 If you want to add a variable in between a string then use #{variable_name} This is known as escaping interpolation
-
-If you want to start a rails console but do not want to update those changesthen the command would be:
-1. rails console --sandbox
 
 Any function used in view is written in helper function under the name of the folder of that view:
 for example you want to make helper function for a folder named "static_pages" in views folder so you would make function in app/helpers/static_pages_helper.rb
