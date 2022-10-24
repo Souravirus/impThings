@@ -1,4 +1,5 @@
 This Repo Contains Many Important Documentations for day to day softwares used by coders. 
 with love from sourav sahoo
-NIt Hamirpur h.p.
- Material worth reading and enjoyable
+NIt Hamirpur Himachal Pradhesh
+@username: souravirus
+
